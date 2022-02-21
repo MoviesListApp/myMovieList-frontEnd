@@ -2,6 +2,7 @@ import { useState } from "react";
 import Movie from "../Movie/Movie";
 import { Container, Row } from 'react-bootstrap';
 import  Modals from "../Modal/Modal";
+import './MovieList.css'
 
 const MovieList = ({ data }) => {
 
@@ -14,7 +15,7 @@ const MovieList = ({ data }) => {
 
     return (
         <>
-        <Container className="div-container">
+        <Container  className="div-container">
             <Row md={3} className="main">
                 {
                     data.map((movie) => {

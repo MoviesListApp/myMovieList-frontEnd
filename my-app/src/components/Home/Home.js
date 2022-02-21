@@ -3,6 +3,8 @@
 import axios from 'axios';
 import MovieList from '../MovieList/MovieList';
 import { useState, useEffect } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
@@ -31,7 +33,7 @@ const Home = () => {
   // console.log("data====================" + data);
 
   return (
-    <div>
+    <div id="sec1">
       {data && <MovieList data={data} />
       }      
       {/* <h1>fdehtdhfghgfhgfffffffffffffffffffffffn</h1> */}

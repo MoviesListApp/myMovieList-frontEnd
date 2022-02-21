@@ -4,17 +4,19 @@ import axios from 'axios';
 import {useRef} from 'react';
 
 function Modals({cardInfo, show, handleClose}) {
+    console.log("CARRRRRRRRRRRRRRRD", cardInfo);
     const commentInputRef = useRef("");
     const addToFav = async ()=>{
         let comment = commentInputRef.current.value;
         console.log("comment====================",comment); 
-       let favorite = {title:cardInfo.title, poster_path:cardInfo.poster_path, overview:cardInfo.overview,comment:comment}
+       let favorite = {title:cardInfo.title, poster_path:cardInfo.poster_path, release_dates:"anything", overview:cardInfo.overview,comment:comment}
        console.log("favorite=====================",favorite);
       
        await axios.post('https://mymovies-backend-app.herokuapp.com/addMovie',favorite)
                   .then(()=>{
                       console.log("Complete :) ");
                   }).catch((err)=>{
+                      console.log("THERE IS ERROR HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                       console.log(err);
                   });
   
