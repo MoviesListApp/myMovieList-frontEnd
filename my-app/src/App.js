@@ -2,14 +2,13 @@
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
-// import FavoriteMovieList from './components/FavoriteMovieList/FavoriteMovieList';
+import FavoriteMovieList from './components/FavoriteMovieList/FavoriteMovieList';
 import { Route, Routes } from 'react-router-dom';
 // function App() {
 //   return (
 //     <div className="App">
 {/* <Routes> */ }
- {/* <Route path='/favorite' element={<FavoriteMovieList/>} /> */ }
-{/* <Route path='/getMovie/:id' element={<MovieDetails />}/> */ }
+//  <Route path='/getMovie/:id' element={<MovieDetails />}/>
 {/* </Routes> */ }
 //     </div>
 //     )
@@ -21,11 +20,10 @@ const App = () => {
     <div className="App">
       <Header />
       <Routes>
- <Route path='/' element={<Home/>}/> 
-
+        <Route path='/' element={<Home />} />
+        <Route path='/favorite' element={<FavoriteMovieList />} />
       </Routes>
       <Footer />
-
     </div>
   );
 }
