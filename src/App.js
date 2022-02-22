@@ -7,17 +7,7 @@ import Home from './components/Home/Home';
 import FavoriteMovieList from './components/FavoriteMovieList/FavoriteMovieList';
 import { Route, Routes } from 'react-router-dom';
 import Banner from './components/Banner/Banner';
-// function App() {
-//   return (
-//     <div className="App">
-{/* <Routes> */ }
-//  <Route path='/getMovie/:id' element={<MovieDetails />}/>
-{/* </Routes> */ }
-//     </div>
-//     )
-// }
 
-// export default App
 const App = () => {
   const [data, setData] = useState();
 
