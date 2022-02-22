@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import SearchBtn from '../SearchBtn/SearchBtn';
 import { useState } from 'react';
 import axios from 'axios';
+import { Button } from 'react-bootstrap';
 
 const NavBar = ({setData}) => {
 
@@ -65,7 +66,7 @@ const NavBar = ({setData}) => {
                     value={query}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 ></TextField></div> */}
-            <form  onSubmit={searchHandler} className="search-form">
+            <form onSubmit={searchHandler} className="search-form">
                 <input
                     name="searchQuery"
                     className="search-input"
@@ -74,7 +75,7 @@ const NavBar = ({setData}) => {
                     value={query}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <button type='submit'>Enter</button>
+                <Button style={{marginleft: "15px", color: "white", backgroundColor: "#E50914"}} type='submit'>Search</Button>
                 {/* <SearchBtn onClick={searchHandler} label="Search" /> */}
             </form>
         </nav>

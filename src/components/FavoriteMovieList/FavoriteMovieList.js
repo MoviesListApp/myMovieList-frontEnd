@@ -40,7 +40,7 @@ const FavoriteMovieList = () => {
 
     return (
         <>
-            <Container  className="div-container">
+            <Container id="sec2" className="div-container">
                 <Row md={3}>
                     {
                         data && data.map((value) => {
@@ -51,8 +51,10 @@ const FavoriteMovieList = () => {
                                     <Card.Body>
                                         <Card.Title>{value.title}</Card.Title>
                                         <Card.Text>
-                                            {value.overview}
+                                            <p >{value.overview}</p>
+                                            {/* <br/> */}
                                         </Card.Text>
+                                        <Card.Header>{value.comment || "Nothing To Comment"}</Card.Header>
                                         <Button className='div-card-button' variant="primary"
                                                 onClick={() => {
                                                     setShow(true)
@@ -80,7 +82,7 @@ const FavoriteMovieList = () => {
             }
 
             {
-                <UpdateModal show={show} handleClose={handleClose}  data={value} getFavMovies={MyFavMovie}
+                <UpdateModal show={show} handleClose={handleClose} data={value} getFavMovies={MyFavMovie}
                     titleInput={title}
                     setTitleInput={setTitleInput}
                     imageInput={image}
