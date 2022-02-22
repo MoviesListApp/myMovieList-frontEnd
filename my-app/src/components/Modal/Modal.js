@@ -9,7 +9,9 @@ function Modals({cardInfo, show, handleClose}) {
     const addToFav = async ()=>{
         let comment = commentInputRef.current.value;
         console.log("comment====================",comment); 
-       let favorite = {title:cardInfo.title, poster_path:cardInfo.poster_path, release_dates:"anything", overview:cardInfo.overview,comment:comment}
+        let release_date = new Date();
+        console.log("release_dates=================", release_date);
+       let favorite = {title:cardInfo.title, poster_path:cardInfo.poster_path, release_dates:`${release_date}`, overview:cardInfo.overview,comment:comment}
        console.log("favorite=====================",favorite);
       
        await axios.post('https://mymovies-backend-app.herokuapp.com/addMovie',favorite)
