@@ -5,25 +5,39 @@ body{
 .main{
     margin:120px 0 !important;
 }
-.card{
+.card1{
     margin: 10px;
     height: 540px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
+.card2{
+    margin: 10px;
+    height: 600px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 .card Img{
     height: 300px;
 }
 .card1 Button{
-    margin-top: 15px;
+    margin-top: 45px;
     margin-left: 60px;
 }
 .card2 Button{
-    margin-top: 15px;
-    margin-left: 35px;
+    margin-top: 45px;
+    margin-left: 5px;
+    margin-bottom: 10px;
 
 }
 .card p {
+    overflow: auto;
+    height: 80px;
+    /* overflow: hidden; */
+}
+.card2 p{
+    overflow: auto;
     height: 100px;
-    overflow: hidden;
 }
 .modal-input{
     width: 100%;
@@ -40,3 +54,12 @@ body{
 .modal-bottom{
     justify-content: center !important;
 }
+
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+    }

@@ -6,7 +6,7 @@ const Movie = (props) => {
         <Card className='card1' style={{ width: '19.3rem' }}>
             <Card.Img variant="top" src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} />
             <Card.Body>
-                <Card.Title>{movie.title}</Card.Title>
+                <Card.Title>{movie.title || "Movie"}</Card.Title>
                 <Card.Text>
                 {movie.overview}
                 </Card.Text>

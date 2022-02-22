@@ -27,7 +27,7 @@ function Modals({cardInfo, show, handleClose}) {
         <>
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Add It To Favorite</Modal.Title>
+                    <Modal.Title>Add To You Favorites</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modal-body">
                     <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${cardInfo.poster_path}`} alt={cardInfo.title}/>

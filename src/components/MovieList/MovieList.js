@@ -27,7 +27,7 @@ const MovieList = ({ data }) => {
             <Modals cardInfo={cardInformation} show={show} handleClose={handleClose} />
         
         {
-                    !data.length && <div><h2>No Such Results, Please try again later</h2></div>
+                    !data.length && <div><h2>There Is No Results, Please try again later</h2></div>
         }
         </>
     );

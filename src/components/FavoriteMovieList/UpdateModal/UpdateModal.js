@@ -29,24 +29,24 @@ function UpdateModal( {show,handleClose,data,getFavMovies, titleInput,
         <>
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Add It To Favorite</Modal.Title>
+                    <Modal.Title>Updates Your Favorites</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="body">
+                <Modal.Body id="body">
                     <div>
-                        <p>Edite Title</p>
+                        <label style={{marginRight: "15px"}}>Edite Title</label>
                         <input value={titleInput} 
                          onChange={(e) => setTitleInput(e.target.value)} className="update-modal-input"
-                        />
-                        <p style={{ "marginTop": "10px" }}>Edit Image</p>
+                        /><br></br>
+                        <label style={{ "marginTop": "25px", marginRight: "5px" }}>Edit Image</label>
                         <input value={imageInput} 
                             onChange={(e) => setImageInput(e.target.value)} className="update-modal-input"
                         />
                     </div>
                     <div>
-                        <label htmlFor="op">Write Your Opinion</label>
-                        <textarea value={commentInput} 
+                        <label style={{marginLeft: "-30px", marginRight: "13px"}} htmlFor="op">Any Ideas!</label>
+                        <textarea style={{marginTop: "25px"}} value={commentInput} 
                             onChange={(e) => setCommentInput(e.target.value)} 
-                        placeholder="Write Your Opinion" type="text" id="op" 
+                        placeholder="Give Me Your Opinion" type="text" id="op" 
                         />
                     </div>
                 </Modal.Body>
