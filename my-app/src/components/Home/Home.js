@@ -8,29 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
-const Home = () => {
-  const [data, setData] = useState();
-
-
-  const getAllMovies =  () => {
-     axios.get('https://mymovies-backend-app.herokuapp.com/getAllTrendingMovies')
-      .then(results => {
-        // response.send(data.data);
-        // console.log(results.data);
-        // return results.data;
-        setData(results.data)
-      }).catch((err) => {
-        console.log(err);
-      })
-  }
-  // console.log(getAllMovies);
-  useEffect(() => {
-    getAllMovies();
-    // let allData = getAllMovies();
-    // console.log(allData);
-    // setData(allData);
-  }, []);
-  // console.log("data====================" + data);
+const Home = ({data}) => {
 
   return (
     <div id="sec1">
