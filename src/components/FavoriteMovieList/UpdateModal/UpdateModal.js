@@ -2,7 +2,6 @@ import Modal from 'react-bootstrap/Modal';
 import { Button } from 'react-bootstrap';
 import {useState} from 'react';
 import axios from 'axios';
-import './UpdateModal.css'
 
 function UpdateModal( {show,handleClose,data,getFavMovies, titleInput,
     setTitleInput,
@@ -17,7 +16,7 @@ function UpdateModal( {show,handleClose,data,getFavMovies, titleInput,
         
       await axios.put(`https://mymovies-backend-app.herokuapp.com/UPDATE/${id}`,updated)
                   .then((newdata)=>{
-                      console.log(newdata);
+                    //   console.log(newdata);
                     getFavMovies();
                   }).catch(err=>{
                       console.log(err);
