@@ -13,7 +13,7 @@ const App = () => {
 
 
   const getAllMovies = () => {
-    axios.get('https://mymovies-backend-app.herokuapp.com/getAllTrendingMovies')
+    axios.get('https://movies-pnbq.onrender.com/getAllTrendingMovies')
       .then(results => {
         // response.send(data.data);
         // console.log(results.data);

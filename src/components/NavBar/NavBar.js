@@ -33,7 +33,7 @@ const NavBar = ({setData}) => {
         
         const getMoviesData = async (querr, pageLimit = 3) => {
             // console.log("22222222222", querr);
-           await axios.get(`https://mymovies-backend-app.herokuapp.com/search?query=${querr}`)
+           await axios.get(`https://movies-pnbq.onrender.com/search?query=${querr}`)
             .then(data => {
                 // response.send(data.data);
                 // console.log("1111111111111111111",data.data.results);

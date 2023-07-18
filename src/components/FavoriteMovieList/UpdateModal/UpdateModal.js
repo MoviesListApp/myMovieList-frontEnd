@@ -14,7 +14,7 @@ function UpdateModal( {show,handleClose,data,getFavMovies, titleInput,
 
         let updated = {comment:commentInput}
         
-      await axios.put(`https://mymovies-backend-app.herokuapp.com/UPDATE/${id}`,updated)
+      await axios.put(`https://movies-pnbq.onrender.com/UPDATE/${id}`,updated)
                   .then((newdata)=>{
                     //   console.log(newdata);
                     getFavMovies();

@@ -17,7 +17,7 @@ const FavoriteMovieList = () => {
     const handleClose = () => setShow(false);
 
     const MyFavMovie = () => {
-        axios.get('https://mymovies-backend-app.herokuapp.com/getMoviesDataBase').then(results => {
+        axios.get('https://movies-pnbq.onrender.com/getMoviesDataBase').then(results => {
             // console.log("results====================", results.data);
             setData(results.data);
         }).catch((err) => {
@@ -29,7 +29,7 @@ const FavoriteMovieList = () => {
     }, [])
 
     const deleteFromMyFav = async (id) => {
-        await axios.delete(`https://mymovies-backend-app.herokuapp.com/DELETE/${id}`)
+        await axios.delete(`https://movies-pnbq.onrender.com/DELETE/${id}`)
             .then(() => {
                 MyFavMovie();
             }).catch((err) => {

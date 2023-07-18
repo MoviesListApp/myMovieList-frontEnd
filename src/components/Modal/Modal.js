@@ -14,7 +14,7 @@ function Modals({cardInfo, show, handleClose}) {
        let favorite = {title:cardInfo.title, poster_path:cardInfo.poster_path, release_dates:`${release_date}`, overview:cardInfo.overview,comment:comment}
     //    console.log("favorite=====================",favorite);
       
-       await axios.post('https://mymovies-backend-app.herokuapp.com/addMovie',favorite)
+       await axios.post('https://movies-pnbq.onrender.com/addMovie',favorite)
                   .then(()=>{
                       console.log("Complete :) ");
                   }).catch((err)=>{
