@@ -46,16 +46,18 @@ const FavoriteMovieList = () => {
                         data && data.map((value) => {
                             // console.log("data============2", data);
                             return (<Col md={3} >
-                                <Card className="card2" style={{ width: '19.3rem' }}>
+                                <Card className="card2" style={{ width: '20.2rem' }}>
                                     <Card.Img variant="top" src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${value.poster_path}`} />
-                                    <Card.Body>
-                                        <Card.Title>{value.title}</Card.Title>
+                                    <Card.Body className="stel">
+                                        <Card.Title style={{width: '310px', fontSize: '19px'}}>{value.title}</Card.Title>
                                         <Card.Text>
                                             <p >{value.overview}</p>
                                             {/* <br/> */}
                                         </Card.Text>
                                         <Card.Header>{value.comment || "Nothing To Comment"}</Card.Header>
-                                        <Button className='div-card-button' variant="primary"
+                                    </Card.Body>
+                                    <div className="dev">
+                                    <Button className='div-card-button' variant="primary"
                                                 onClick={() => {
                                                     setShow(true)
                                                     setValue(value);
@@ -67,7 +69,7 @@ const FavoriteMovieList = () => {
                                         <Button className='div-card-button' variant="danger"
                                                 onClick={() => deleteFromMyFav(value.id)}
                                             >Delete</Button>
-                                    </Card.Body>
+                                    </div>
                                 </Card>
                             </Col>)
                         })

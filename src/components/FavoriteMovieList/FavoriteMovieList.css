@@ -1,4 +1,42 @@
 .div-container{
     margin-top: 200px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
+
+.card2{
+        height: 600px;
+        box-shadow: 0 8px 16px 0 rgba(223, 85, 85, 0.2);
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        align-items: center;
+
+}
+
+.stel{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card2 Img{
+    height: 250px;
+}
+
+.card p {
+    overflow: auto;
+    height: 80px;
+    
+    /* overflow: hidden; */
+}
+/* .card2 Button{
+    width: 150px;
+    margin-bottom: 20px;
+ } */
+
+ .dev{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    margin-bottom: 20px;
+ }

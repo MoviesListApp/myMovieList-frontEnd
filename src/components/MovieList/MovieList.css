@@ -6,39 +6,49 @@ body{
     margin:120px 0 !important;
 }
 .card1{
-    margin: 10px;
-    height: 540px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    /* margin: 10px; */
+    height: 480px;
+    box-shadow: 0 8px 16px 0 rgba(223, 85, 85, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
 }
 
-.card2{
+
+/* .card2{
     margin: 10px;
     height: 600px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+} */
 
 .card Img{
-    height: 300px;
+    height: 250px;
 }
+.card{
+    margin-bottom: 50px;
+}
+
+
 .card1 Button{
-    margin-top: 45px;
-    margin-left: 60px;
+   width: 150px;
+   margin-bottom: 20px;
 }
-.card2 Button{
+/* .card2 Button{
     margin-top: 45px;
     margin-left: 5px;
     margin-bottom: 10px;
 
-}
+} */
 .card p {
     overflow: auto;
     height: 80px;
     /* overflow: hidden; */
 }
-.card2 p{
+/* .card2 p{
     overflow: auto;
     height: 100px;
-}
+} */
 .modal-input{
     width: 100%;
     border: 2px solid #E50914 ;
@@ -63,3 +73,5 @@ body{
     ::-webkit-scrollbar-thumb {
     background: #FF0000;
     }
+
+  
