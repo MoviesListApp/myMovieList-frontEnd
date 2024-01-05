@@ -2,6 +2,8 @@ import Modal from 'react-bootstrap/Modal';
 import {Button} from 'react-bootstrap';
 import axios from 'axios';
 import {useRef} from 'react';
+const my_api = process.env.REACT_APP_BASE_URL;
+
 
 function Modals({cardInfo, show, handleClose}) {
     // console.log("CARRRRRRRRRRRRRRRD", cardInfo);
@@ -14,7 +16,7 @@ function Modals({cardInfo, show, handleClose}) {
        let favorite = {title:cardInfo.title, poster_path:cardInfo.poster_path, release_dates:`${release_date}`, overview:cardInfo.overview,comment:comment}
     //    console.log("favorite=====================",favorite);
       
-       await axios.post('https://movies-pnbq.onrender.com/addMovie',favorite)
+       await axios.post(`${my_api}/addMovie`,favorite)
                   .then(()=>{
                       console.log("Complete :) ");
                   }).catch((err)=>{

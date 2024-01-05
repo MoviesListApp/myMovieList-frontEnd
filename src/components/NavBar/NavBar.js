@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
+const my_api = process.env.REACT_APP_BASE_URL;
 
 const NavBar = ({setData}) => {
 
@@ -33,7 +34,7 @@ const NavBar = ({setData}) => {
         
         const getMoviesData = async (querr, pageLimit = 3) => {
             // console.log("22222222222", querr);
-           await axios.get(`https://movies-pnbq.onrender.com/search?query=${querr}`)
+           await axios.get(`${my_api}/search?query=${querr}`)
             .then(data => {
                 // response.send(data.data);
                 // console.log("1111111111111111111",data.data.results);

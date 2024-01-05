@@ -2,6 +2,7 @@ import Modal from 'react-bootstrap/Modal';
 import { Button } from 'react-bootstrap';
 import {useState} from 'react';
 import axios from 'axios';
+const my_api = process.env.REACT_APP_BASE_URL;
 
 function UpdateModal( {show,handleClose,data,getFavMovies, titleInput,
     setTitleInput,
@@ -14,7 +15,7 @@ function UpdateModal( {show,handleClose,data,getFavMovies, titleInput,
 
         let updated = {comment:commentInput}
         
-      await axios.put(`https://movies-pnbq.onrender.com/UPDATE/${id}`,updated)
+      await axios.put(`${my_api}/UPDATE/${id}`,updated)
                   .then((newdata)=>{
                     //   console.log(newdata);
                     getFavMovies();

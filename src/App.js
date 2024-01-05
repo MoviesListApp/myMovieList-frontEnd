@@ -7,16 +7,19 @@ import Home from './components/Home/Home';
 import FavoriteMovieList from './components/FavoriteMovieList/FavoriteMovieList';
 import { Route, Routes } from 'react-router-dom';
 import Banner from './components/Banner/Banner';
+const my_api = process.env.REACT_APP_BASE_URL;
+
 
 const App = () => {
   const [data, setData] = useState();
 
+  console.log(`${my_api}/getAllTrendingMovies`);
 
   const getAllMovies = () => {
-    axios.get('https://movies-pnbq.onrender.com/getAllTrendingMovies')
+    axios.get(`${my_api}/getAllTrendingMovies`)
       .then(results => {
         // response.send(data.data);
-        // console.log(results.data);
+        console.log(results.data);
         // return results.data;
         setData(results.data)
       }).catch((err) => {

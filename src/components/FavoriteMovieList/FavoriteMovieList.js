@@ -6,6 +6,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import UpdateModal from '../FavoriteMovieList/UpdateModal/UpdateModal';
 import { Button } from 'react-bootstrap';
 import './FavoriteMovieList.css';
+const my_api = process.env.REACT_APP_BASE_URL;
 
 const FavoriteMovieList = () => {
     const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ const FavoriteMovieList = () => {
     const handleClose = () => setShow(false);
 
     const MyFavMovie = () => {
-        axios.get('https://movies-pnbq.onrender.com/getMoviesDataBase').then(results => {
+        axios.get(`${my_api}/getMoviesDataBase`).then(results => {
             // console.log("results====================", results.data);
             setData(results.data);
         }).catch((err) => {
@@ -29,7 +30,7 @@ const FavoriteMovieList = () => {
     }, [])
 
     const deleteFromMyFav = async (id) => {
-        await axios.delete(`https://movies-pnbq.onrender.com/DELETE/${id}`)
+        await axios.delete(`${my_api}/DELETE/${id}`)
             .then(() => {
                 MyFavMovie();
             }).catch((err) => {
